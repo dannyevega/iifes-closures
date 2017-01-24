@@ -18,4 +18,14 @@ Question.prototype.displayQuestion = function(){
 	}
 }
 
+Question.prototype.checkUserAnswer = function(ans){
+	if(ans === this.answer){
+		console.log("Correct!");
+	} else {
+		console.log("Better luck next time.");
+	}
+}
+
 currentQuestion.displayQuestion();
+var userInput = parseInt(prompt("Please enter the correct answer to question in the console:"));
+currentQuestion.checkUserAnswer(userInput);
